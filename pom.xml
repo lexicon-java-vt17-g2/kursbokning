@@ -2,8 +2,17 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>se.lexicon.javavt17.g2</groupId>
 	<artifactId>kursbokning</artifactId>
-	<version>1.0-SNAPHOT</version>
+	<version>1.0-SNAPSHOT</version>
 	<packaging>war</packaging>
+	
+	<dependencies>
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>7.0</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
 
 	<properties>
 		<failOnMissingWebXml>false</failOnMissingWebXml>
