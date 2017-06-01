@@ -9,6 +9,7 @@ import javax.validation.constraints.Min;
 import javax.ws.rs.DefaultValue;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
@@ -28,5 +29,12 @@ public class StudentController {
 			@QueryParam("limit") @DefaultValue("10") @Valid @Min(1) @Max(100) int limit)
 	{
 		return service.list(first, limit);
+	}
+
+	@GET
+	@Path("{id}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Student get(@PathParam("id") long id) {
+		return service.get(id);
 	}
 }

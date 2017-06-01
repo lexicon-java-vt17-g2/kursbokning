@@ -16,4 +16,8 @@ public class StudentService {
 	public List<Student> list(int first, int limit) {
 		return em.createQuery("SELECT student FROM Student student", Student.class).setFirstResult(first).setMaxResults(limit).getResultList();
 	}
+
+	public Student get(long id) {
+		return em.find(Student.class, id);
+	}
 }
