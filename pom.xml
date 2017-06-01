@@ -5,6 +5,16 @@
 	<version>1.0-SNAPSHOT</version>
 	<packaging>war</packaging>
 	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.wildfly.plugins</groupId>
+				<artifactId>wildfly-maven-plugin</artifactId>
+				<version>1.1.0.Final</version>
+			</plugin>
+		</plugins>
+	</build>
+	
 	<dependencies>
 		<dependency>
 			<groupId>javax</groupId>
@@ -19,5 +29,6 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
+		<wildfly.deployment.name>kursbokning.war</wildfly.deployment.name>
 	</properties>
 </project>
