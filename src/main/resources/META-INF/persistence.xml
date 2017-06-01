@@ -7,7 +7,7 @@
 	<persistence-unit name="kursbokning" transaction-type="JTA">
 		<jta-data-source>java:/datasource/kursbokning</jta-data-source>
 		<properties>
-			<property name="hibernata.show_sql" value="true" />
+			<property name="hibernate.show_sql" value="true" />
 		</properties>
 	</persistence-unit>
 </persistence>
