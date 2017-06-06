@@ -10,4 +10,5 @@ import se.lexicon.javavt17g2.kursbokning.domain.Student;
 public interface StudentService {
 	List<Student> list(int first, int limit);
 	Student get(long id);
+	long numberOfEntries();
 }

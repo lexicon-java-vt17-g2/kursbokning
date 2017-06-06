@@ -22,4 +22,9 @@ public class StudentServiceImpl implements StudentService {
 	public Student get(long id) {
 		return em.find(Student.class, id);
 	}
+
+	@Override
+	public long numberOfEntries() {
+		return em.createQuery("SELECT count(student) FROM Student student", Long.class).getSingleResult();
+	}
 }
