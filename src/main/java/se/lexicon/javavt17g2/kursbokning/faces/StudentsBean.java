@@ -2,7 +2,6 @@ package se.lexicon.javavt17g2.kursbokning.faces;
 
 import java.util.List;
 
-import javax.annotation.PostConstruct;
 import javax.enterprise.inject.Model;
 import javax.inject.Inject;
 import javax.inject.Named;

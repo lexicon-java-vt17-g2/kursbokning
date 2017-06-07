@@ -14,6 +14,8 @@ import se.lexicon.javavt17g2.kursbokning.service.StudentService;
 
 @ApplicationScoped
 public class StudentsLazyDataModel extends LazyDataModel<Student> {
+	private static final long serialVersionUID = 1L;
+
 	@Inject
 	private StudentService service;
 
