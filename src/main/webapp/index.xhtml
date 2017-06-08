@@ -4,6 +4,13 @@
 		<title>Kursbokning</title>
 	</h:head>
 	<h:body>
+		<h2>Courses</h2>
+		<p:dataTable var="course" value="#{courses.list}">
+			<p:column headerText="Name">
+				<h:outputText value="#{course.name}" />
+			</p:column>
+		</p:dataTable>
+		<h2>Students</h2>
 		<p:dataTable var="student" value="#{students.lazyModel}" rows="10" lazy="true" paginator="true">
 			<p:column headerText="Name">
 				<h:outputText value="#{student.name}" />
