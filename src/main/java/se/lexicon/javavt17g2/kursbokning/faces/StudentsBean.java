@@ -19,11 +19,26 @@ public class StudentsBean {
 	@Inject
 	private LazyDataModel<Student> lazyModel;
 
+	private Student single;
+
 	public List<Student> getList() {
 		return service.list(0, 10);
 	}
 
 	public LazyDataModel<Student> getLazyModel() {
 		return this.lazyModel;
+	}
+
+	public Student getSingle() {
+		return this.single;
+	}
+
+	public String bookCourses(Student student) {
+		this.single = service.fetch(student);;
+		return "book-course";
+	}
+
+	public void saveSingle() {
+		service.save(single);
 	}
 }

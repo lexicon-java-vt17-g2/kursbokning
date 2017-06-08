@@ -11,4 +11,6 @@ public interface StudentService {
 	List<Student> list(int first, int limit);
 	Student get(long id);
 	long numberOfEntries();
+	Student fetch(Student student);
+	void save(Student student);
 }

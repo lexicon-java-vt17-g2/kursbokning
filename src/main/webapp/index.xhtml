@@ -15,6 +15,11 @@
 			<p:column headerText="Name">
 				<h:outputText value="#{student.name}" />
 			</p:column>
+			<p:column headerText="Boka Kurser">
+				<h:form>
+					<h:commandLink action="#{students.bookCourses(student)}" value="Boka" />
+				</h:form>
+			</p:column>
 		</p:dataTable>
 	</h:body>
 </html>

@@ -27,4 +27,20 @@ public class StudentServiceImpl implements StudentService {
 	public long numberOfEntries() {
 		return em.createQuery("SELECT count(student) FROM Student student", Long.class).getSingleResult();
 	}
+
+	@Override
+	public Student fetch(Student student) {
+		student = em.merge(student);
+		// XXX: .size() hack to force a database fetch
+		student.getCourses().size();
+		return student;
+	}
+
+	@Override
+	public void save(Student student) {
+		if(student.getId() == null)
+			em.persist(student);
+		else
+			em.merge(student);
+	}
 }

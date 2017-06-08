@@ -21,12 +21,7 @@ public class StudentsLazyDataModel extends LazyDataModel<Student> {
 
 	@Override
 	public List<Student> load(int first, int limit, String sortField, SortOrder order, Map<String, Object> filters) {
-		System.out.println("OK: " + first + ", " + limit);
+		this.setRowCount((int)service.numberOfEntries());
 		return service.list(first, limit);
-	}
-
-	@Override
-	public int getRowCount() {
-		return (int)service.numberOfEntries();
 	}
 }
